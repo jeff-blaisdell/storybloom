@@ -10,24 +10,22 @@
 	<body>
 		{% include "blogs/site-header.html" %}
 		<main class="sitecontent l-sitecontent">
-			{% for post in posts %}
-				<div class="post">
-					<header class="post-header">
-						<h3><a href="/b/{{post.id}}">{{post.title}}</a></h3>
-					</header>
-					<div class="post-content">
-						<p>{{post.post}}</p>
-					</div>	
-					<footer class="post-footer">
-						<span class="post-author">
-							{{post.author}}
-						</span>
-						<span class="post-date">
-							{{post.pub_date}}
-						</span>
-					</footer>		
-				</div>
-			{% endfor %}
+			<div class="post">
+				<header class="post-header">
+					<h3>{{post.title}}</h3>
+				</header>
+				<div class="post-content">
+					<p>{{post.post}}</p>
+				</div>	
+				<footer class="post-footer">
+					<span class="post-author">
+						{{post.author}}
+					</span>
+					<span class="post-date">
+						{{post.pub_date}}
+					</span>
+				</footer>		
+			</div>
 		</main>
 	</body>
 	<script type="text/javascript" src="{% static 'scripts/bootstrap/bootstrap.min.js' %}"></script>
