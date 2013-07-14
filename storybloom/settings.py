@@ -168,3 +168,8 @@ TEMPLATE_CONTEXT_PROCESSORS = TCP + (
     'django.core.context_processors.request',
 )
 
+try:
+    from local_settings import *
+except ImportError, e:
+    pass
+
