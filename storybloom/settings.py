@@ -64,7 +64,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = 'storybloom/static'
+STATIC_ROOT = '/storybloom/static-build/'
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
@@ -168,8 +168,8 @@ TEMPLATE_CONTEXT_PROCESSORS = TCP + (
     'django.core.context_processors.request',
 )
 
-try:
-    from local_settings import *
-except ImportError, e:
-    pass
+#try:
+#    from local_settings import *
+#except ImportError, e:
+#    pass
 
