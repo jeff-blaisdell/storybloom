@@ -4,28 +4,70 @@
 .l-siteheader {
 	position: absolute;
 	width: 100%;
-	height: 500px;
+	height: 300px;
+}
+
+.navbar {
+	position: absolute;
+	width: 100%;
+	top: 300px;
 }
 
 .l-sitecontent {
 	position: absolute;
-	top: 500px;
-	left: 0;	
+	top: 360px;
+	left: 15%;
+	right: 35%;	
+	padding: 0px 0px 0px 0px;
+}
+.post-content {
+	max-width: 600px
 }
 
-@media (min-width: 800px) {
+.sitecontentright {
+position: absolute;
+	top: 420px;
+	left: 70%;	
+	right: 10%;
+	padding-right: 10px;
+}
 
-	.l-siteheader {
-	    position: fixed;
-		width: 30%;
-		max-width: 300px;
-		height: 100%;
-	}
-	
+@media (max-width: 449px) {
+
 	.l-sitecontent {
-		position: absolute;
-		top: 0;
-		left: 35%;	
+		top: 305px;
+		left: 5%;
+		right: 5%;
 	}
-	
+
+	.sitecontentright {
+	display: none;
+	}
+}
+@media (min-width: 450px) and (max-width: 720px) {
+	.l-sitecontent {
+	top: 380px;
+	padding: 0px 15px 0px 0px;
+	left: 5%;
+}
+ 	.sitecontentright {
+ 		top: 432px;
+ 		right: 5%;
+ 		padding: 0px;
+}
+ 	.profile-photo {
+ 		position: center;
+ 	}
+
+
+ 	
+	}
+
+
+@media (min-width: 800px) {
+	.1-sitecontent {
+		position: absolute;
+		width: 100%;
+
+	}
 }

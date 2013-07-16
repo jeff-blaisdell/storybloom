@@ -14,41 +14,51 @@
 .siteheader-content {
 	width: 100%;
     position: absolute;
-    top: 300px;
+    top: 100px;
     left: 0;
     background-image: linear-gradient(to top,rgba(0,0,0,0.5) 0,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%);
     padding: 55px 50px;
     color: white;
 }
-
+    .siteheader-content-inner {
+        font-family: 'Indie Flower', cursive;
+        color: white;
+    }
+}
 @media (min-width: 450px) and (max-width: 720px) {
+    .siteheader-content {
+        top: 100px;
+    }
 
 	.siteheader-image {
     	background-position-x: 55%;
     	background-position-y: 55%;
 	}
-	
+	   .siteheader-content-inner {
+        font-family: 'Indie Flower', cursive;
+        color: white;
+    }
 }
 
 @media (min-width: 800px) {
-	
-	.siteheader-image {
+
+    	.siteheader-image {
     	background-position-x: 65%;
     	background-position-y: 65%;
 	}
 	
     .siteheader-content {
-    	position: absolute;
-    	width: 100%;
-    	bottom: 0;
-    	left: 0;
-    	background-image: linear-gradient(to top,rgba(0,0,0,0.5) 0,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%);
-	    padding: 0;
-	}
-	
-	.siteheader-content-inner {
-	    padding: 55px 10px;
-    	color: white;
-	}
+        width: 100%;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        background-image: linear-gradient(to top,rgba(0,0,0,0.5) 0,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%);
+        padding: 55px 50px;
+        color: white;
+    }
+    .siteheader-content-inner {
+        font-family: 'Indie Flower', cursive;
+        color: white;
+    }
 
 }
