@@ -1,2 +1,3 @@
 venv
 storybloom/static-build/*
+*.pyc
