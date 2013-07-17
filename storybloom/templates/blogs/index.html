@@ -9,26 +9,39 @@
 	</head>
 	<body>
 		{% include "blogs/site-header.html" %}
-		<main class="sitecontent l-sitecontent">
-			{% for post in posts %}
-				<div class="post">
-					<header class="post-header">
-						<h3><a href="/b/{{post.id}}">{{post.title}}</a></h3>
-					</header>
-					<div class="post-content">
-						<p>{{post.post}}</p>
-					</div>	
-					<footer class="post-footer">
-						<span class="post-author">
-							{{post.author}}
-						</span>
-						<span class="post-date">
-							{{post.pub_date}}
-						</span>
-					</footer>		
+		{% include "blogs/nav-bar.html" %}
+	    <main>
+			<section class="sitecontent l-sitecontent">
+				{% for post in posts %}
+					<div class="post">
+						<header class="post-header">
+							<h3><a href="./b/{{post.id}}">{{post.title}}</a></h3>
+						</header>
+						<img src="{% static post.image_url %}" />
+						<div class="post-content">
+							<p>{{post.post}}</p>
+						</div>	
+						<footer class="post-footer">
+							<span class="post-author">
+								{{post.author}}
+							</span>
+							<span class="post-date">
+								{{post.pub_date}}
+							</span>
+						</footer>		
+					</div>
+				{% endfor %}
+			</section>
+			<section class="sitecontentright">
+				<div class="profile">
+					<img class="profile-photo" src="../../static/images/profile.jpg">
+					<div class="profile-blurb">
+						Story Bloom is about the little things that make life so beautiful!  As a girl who loves to get her hands dirty and try new things, I want to share my journey in all things artistic with you.  Grab a cup of coffee, maybe some scissors or glue, and enjoy!
+					</div>
 				</div>
-			{% endfor %}
-		</main>
+			</section>
+	    </main>
 	</body>
-	<script type="text/javascript" src="{% static 'scripts/bootstrap/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'scripts/jquery/jquery.js' %}"></script>
+	<script type="text/javascript" src="{% static 'scripts/bootstrap/bootstrap.js' %}"></script>
 </html>
