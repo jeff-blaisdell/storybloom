@@ -15,7 +15,7 @@
 				{% for post in posts %}
 					<div class="post">
 						<header class="post-header">
-							<h3><a href="./b/{{post.id}}">{{post.title}}</a></h3>
+							<h3><a href="./b/{{post.category.id}}/{{post.id}}">{{post.title}}</a></h3>
 						</header>
 						<img src="{% static post.image_url %}" />
 						<div class="post-content">
