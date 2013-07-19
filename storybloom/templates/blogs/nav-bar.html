@@ -9,18 +9,11 @@
          <li>      
             <a href="home.html" title=""><img src="http://placehold.it/25/25"><span>Home</span></a>   
         </li> 
-        <li>     
-            <a href="crafts.html" title=""><img src="http://placekitten.com/25/25"><span>DIY</span></a>   
-        </li> 
-        <li> 
-            <a  href="photography.html" title=""><img src="http://placekitten.com/25/25"><span>Photography</span></a>
-        </li>
-        <li> 
-            <a  href="recipes" title=""><img src="http://placekitten.com/25/25"><span>Recipes</span></a> 
-        </li>
-        <li> 
-            <a  href="Everyday life" title=""><img src="http://placekitten.com/25/25"><span>Everyday</span></a>
-        </li>
+        {% for category in categories %}
+	        <li> 
+	            <a  href="/b/{{category.id}}" title="{{category.name}}"><img src="http://placekitten.com/25/25"><span>{{category.name}}</span></a>
+	        </li>        
+        {% endfor %}
         <li> 
              <a  href="About" title=""><img src="http://placekitten.com/25/25"><span>About</span></a>
         </li>

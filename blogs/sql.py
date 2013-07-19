@@ -50,4 +50,34 @@ def d():
 def e():
     cursor = connection.cursor()
     cursor.execute('ALTER TABLE "blogs_post_new" RENAME TO "blogs_post"')
+    
+def f():
+    cursor = connection.cursor()
+    cursor.execute('CREATE TABLE "blogs_category_new" ( \
+                      "id" integer NOT NULL PRIMARY KEY, \
+                      "name" varchar(50) NOT NULL, \
+                      "short_desc" varchar(100) NOT NULL, \
+                      "long_desc" varchar(400) NOT NULL \
+                    )')
+    
+def g():
+    cursor = connection.cursor()
+    cursor.execute('INSERT INTO "blogs_category_new" \
+                        ("id", \
+                         "name", \
+                         "short_desc", \
+                         "long_desc") \
+                       SELECT NULL, \
+                              "name", \
+                              "short_desc", \
+                              "long_desc" \
+                         FROM "blogs_category"')
+    
+def h():
+    cursor = connection.cursor()
+    cursor.execute('DROP TABLE "blogs_category"')    
+    
+def i():
+    cursor = connection.cursor()
+    cursor.execute('ALTER TABLE "blogs_category_new" RENAME TO "blogs_category"')    
 
