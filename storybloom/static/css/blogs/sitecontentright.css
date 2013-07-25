@@ -2,10 +2,7 @@
 .profile {
 	max-width: 200px;
  }
-.profile-photo {
-     border-radius: 20px;
-     border: 10px solid #DFFFBF;
- }
+
 .profile-blurb {
 	font-size: 1.5em;
 	font-family: 'Indie Flower';
@@ -33,7 +30,6 @@
 .profile-photo {
 		width: 130px;
 	    height: auto;
-	    border-radius: 20px;
-    	border: 5px solid #DFFFBF;
+	
  }
 	}
