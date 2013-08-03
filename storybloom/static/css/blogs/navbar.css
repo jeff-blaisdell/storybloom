@@ -1,130 +1,57 @@
        /** Site Navigation **/
-            .navbar ul {
-                max-width: 1240px;
-                margin: 0;
-                padding: 0;
-                list-style: none;
+          
+
+.navbar{
+    position: absolute;
+
+}
+.navbar-inverse .navbar-inner {
+    background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+    border-color: #ffffff;
+}
+
+
+
+
+ .navbar ul {
+            
                 font-size: 1.5em;
                 font-weight: 300;
 
-            }
+            }       
 
-            .navbar{
-                margin:0 auto;
-                text-align: center;
-            }
-            .navbar ul {
-                list-style: bold;
-            }
-
-            .navbar ul li {
-                display: inline-block;
+ .navbar ul li {
+                
                 font-family: 'Indie Flower', cursive;
                 text-decoration: none;
                 font-weight: bold;
-                margin: 0px 5px;
-                padding: 10px 10px ;
-                border-top-left-radius: 15px;
-                border-top-right-radius: 15px;
-               
+                padding: 10px, 10px;
+                
             }
+.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus {
+color: #1B7294;
+background-color: #ffffff;
+}
+.navbar-inverse .brand, .navbar-inverse .nav > li > a {
+color: #1B7294;
+text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
 
+.navbar-inverse .brand, .navbar-inverse .nav > li > a:hover {
+color: #777777;
+text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
 
-@media (max-width: 449px) {
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle, .navbar-inverse .nav li.dropdown.active > .dropdown-toggle, .navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {
+color: #777777;
+background-color: #ffffff;
+}
 
-    .navbar{
-     
-       
-        width: 215px;
-        top: 0px;
-        right: 0%;
-        text-align: right;
-        padding: 0px;
+@media (min-width: 980px) {
+    .navbar {
+    position: absolute;
+    width: 100%;
+    top: 300px;
+}
 
-    }
-
-    #menu-icon {
-        float: right;
-        padding: 1px;
-        display: block;
-        width: 40px;
-        height: 40px;
-        background: #E4E3E8 url('../../images/menu.png') center;
-        border-radius: 6px;
-        border: 3px solid #E4E3E8;
-    }
-
-
-
-    a:hover#menu-icon {
-        background-color: #E4E3E8;
-        border-radius: 6px;
-        border: 3px solid #BADA55;
-        display: block;
-
-    }
-
-  
-
-    .navbar ul li a:hover#menu-icon > ul{
-        display: block;
-    }
-
-    li {
-        display: block;
-        float: right;
-        padding: 0px;
-       
-    }
-    
-
-
-
-@media (min-width: 450px) and (max-width: 720px) {
-
-     .navbar ul {
-                width: 100%;
-                display: block;
-                height: auto;
-            }
-     .navbar ul li {
-                width: 33.3%;
-                display: inline block;
-                padding: 8px;
-                margin: 0px;
-                border-top-left-radius: 2px;
-                border-top-right-radius: 2px;
-            }
-
-
-
-@media (min-width: 800px) {
-     .navbar ul {
-                max-width: 1240px;
-                margin: 0;
-                padding: 0;
-                list-style: none;
-                font-size: 1.5em;
-                font-weight: 300;
-            }
-             
-            .navbar{
-                margin:0 auto;
-                text-align: center;
-            }
-            .navbar ul {
-                list-style: bold;
-            }
-
-            .navbar ul li {
-                display: inline-block;
-                font-family: 'Indie Flower', cursive;
-                text-decoration: none;
-                font-weight: bold;
-                margin: 0px 5px;
-                padding: 10px 20px ;
-                border-top-left-radius: 15px;
-                border-top-right-radius: 15px;
-               
-            }
-        /** EndSite Navigation **/
+}

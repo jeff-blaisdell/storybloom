@@ -7,11 +7,6 @@
 	height: 300px;
 }
 
-.navbar {
-	position: absolute;
-	width: 100%;
-	top: 300px;
-}
 
 .l-sitecontent {
 	position: absolute;
@@ -44,14 +39,14 @@ position: absolute;
 	display: none;
 	}
 }
-@media (min-width: 450px) and (max-width: 720px) {
+@media (min-width: 450px) and (max-width: 979px) {
 	.l-sitecontent {
-	top: 380px;
+	top: 305px;
 	padding: 0px 15px 0px 0px;
 	left: 5%;
 }
  	.sitecontentright {
- 		top: 432px;
+ 		top: 365px;
  		right: 5%;
  		padding: 0px;
 }
@@ -64,7 +59,7 @@ position: absolute;
 	}
 
 
-@media (min-width: 800px) {
+@media (min-width: 721px) {
 	.1-sitecontent {
 		position: absolute;
 		width: 100%;
