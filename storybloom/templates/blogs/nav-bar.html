@@ -12,7 +12,7 @@
               <li><img src="../../static/images/home.jpg"><a href="#">Home</a></li>
         {% for category in categories %}
             <li> 
-                <a  href="/b/{{category.id}}" title="{{category.name}}"><img src="../../static/images/diy.jpg"><span>{{category.name}}</span></a>
+                <a  href="/b/{{category.id}}" title="{{category.name}}"><img src="../../static/images/{{category.image_url}}"><span>{{category.name}}</span></a>
             </li>        
         {% endfor %}
               <li class="dropdown">
