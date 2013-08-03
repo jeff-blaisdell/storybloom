@@ -81,3 +81,6 @@ def i():
     cursor = connection.cursor()
     cursor.execute('ALTER TABLE "blogs_category_new" RENAME TO "blogs_category"')    
 
+def j():
+    cursor = connection.cursor()
+    cursor.execute('ALTER TABLE "blogs_category" ADD "image_url" varchar(100)')  

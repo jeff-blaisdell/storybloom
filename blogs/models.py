@@ -5,6 +5,7 @@ class Category(models.Model):
     name       = models.CharField('Name', max_length=50)
     short_desc = models.CharField('Short Description', max_length=100)
     long_desc  = models.CharField('Long Description', max_length=400)
+    image_url  = models.CharField('Image URL', max_length=100)
     def __str__(self):
         return self.name
     def __unicode(self):
