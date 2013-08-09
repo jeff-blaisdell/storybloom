@@ -15,10 +15,10 @@
 		    {% for post in posts %}
 				<div class="post">
 					<header class="post-header">
-						<h3>{{post.title}}</h3>
+						<h3><a href="/b/{{post.category.id}}/{{post.id}}">{{post.title}}</a></h3>
 					</header>
 					<div class="post-content">
-						<p>{{post.post}}</p>
+						{{post.post}}
 					</div>	
 					<footer class="post-footer">
 						<span class="post-author">

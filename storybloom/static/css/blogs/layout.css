@@ -26,11 +26,13 @@ position: absolute;
 	right: 10%;
 	padding-right: 10px;
 }
-
-@media (max-width: 449px) {
+nav {
+		top: 310px;
+	}
+@media (max-width: 480px) {
 
 	.l-sitecontent {
-		top: 305px;
+		top: 275px;
 		left: 5%;
 		right: 5%;
 	}
@@ -38,22 +40,29 @@ position: absolute;
 	.sitecontentright {
 	display: none;
 	}
+
+	nav {
+		top: 2px;
+
+	}
 }
-@media (min-width: 450px) and (max-width: 979px) {
+@media (min-width: 481px) and (max-width: 830px) {
 	.l-sitecontent {
-	top: 305px;
+	top: 380px;
 	padding: 0px 15px 0px 0px;
 	left: 5%;
 }
  	.sitecontentright {
- 		top: 365px;
+ 		top: 440px;
  		right: 5%;
  		padding: 0px;
 }
  	.profile-photo {
  		position: center;
  	}
-
+	nav {
+		top: 300px;
+	}
 
  	
 	}
