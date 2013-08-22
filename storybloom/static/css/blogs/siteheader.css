@@ -4,7 +4,7 @@
 .siteheader-image {
 	width: 100%;
 	height: 100%;
-	background-image: url('../../images/site-header.jpg');
+	background-image: url('../../images/banner5.jpg');
 	background-position: center;
     background-position-x: 50%;
     background-position-y: 50%;
@@ -26,7 +26,7 @@
 }
 @media (min-width: 450px) and (max-width: 720px) {
     .siteheader-content {
-        top: 100px;
+        top: 120px;
     }
 
 	.siteheader-image {
@@ -47,10 +47,10 @@
 	}
 	
     .siteheader-content {
-        width: 25%;
+      
         position: absolute;
-        top: 100px;
-        left: 0;
+        top: 140px;
+        left: 5%;
         padding: 55px 50px;
         color: white;
     }
