@@ -1,37 +1,27 @@
 {% load staticfiles %}
-  <head>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
-       
-        <script type="text/javascript">
-          // Wait for the page to load.
-                            $(function() {  
-                    var pull        = $('#pull');  
-                        menu        = $('nav ul');  
-                        menuHeight  = menu.height();  
-                  
-                    $(pull).on('click', function(e) {  
-                        e.preventDefault();  
-                        menu.slideToggle();  
-                    });  
-                }); 
-                $(window).resize(function(){  
-                    var w = $(window).width();  
-                    if(w > 320 && menu.is(':hidden')) {  
-                        menu.removeAttr('style');  
-                    }  
-                });   
-        </script>
-  </head>
-  <nav class="clearfix">  
-            <ul class="clearfix">
-                 <li><a href="#"><img src="../../static/images/home.jpg">Home</a></li>
-                {% for category in categories %}
-                 <li> 
-                  <a  href="/b/{{category.id}}" title="{{category.name}}"><img src="../../static/images/{{category.image_url}}"><span>{{category.name}}</span></a>
-                </li>        
-               {% endfor %}
-                 <li><a href="#"><img src="../../static/images/portfolio.jpg">Portfolio</a></li>
-            </ul>
-            <a href="#" id="pull"><img src="../../static/images/menu.png"</a>  
-        </nav>  
+<header class="siteheader l-global-width">
+    <div class="siteheader-image"><div class="siteheader-content"></div>
+    <div class="siteheader-content">
+      <div class="siteheader-content-inner">
+
+          <h1>Story Bloom</h1>
+          <p> a tale of an everyday story.</p>
+        </div>
+    </div>
+</header>
+<nav class="clearfix">  
+  <ul class="clearfix">
+    <li>
+      <a href="/"><img src="{% static 'images/home.jpg' %}">Home</a>
+    </li>
+    {% for category in categories %}
+      <li> 
+        <a  href="/b/{{category.id}}" title="{{category.name}}"><img src="../../../static/images/{{category.image_url}}"><span>{{category.name}}</span></a>
+      </li>        
+    {% endfor %}
+    <li>
+      <a href="#"><img src="{% static 'images/portfolio.jpg' %}">Portfolio</a>
+    </li>
+  </ul>
+  <a id="pull" href="#"><img src="{% static 'images/menu.png' %}"</a>  
+</nav>  

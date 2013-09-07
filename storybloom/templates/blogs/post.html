@@ -1,15 +1,11 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html>
-	<head>
-	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	    <title>Story Bloom</title>
-		<link type="text/css" rel="stylesheet" href="{% static 'css/blogs/common.css' %}">
-		<link type="text/css" rel="stylesheet" href="{% static 'css/blogs/index.css' %}">
-	</head>
+	{% include "blogs/site-header.html" %}
 	<body>
-		{% include "blogs/site-header.html" %}
-		<main class="sitecontent l-sitecontent">
+		{% include "blogs/nav-bar.html" %}
+		<link type="text/css" rel="stylesheet" href="{% static 'css/blogs/post.css' %}">
+		<main class="l-global-width">
 			<div class="post">
 				<header class="post-header">
 					<h3>{{post.title}}</h3>
@@ -27,6 +23,6 @@
 				</footer>		
 			</div>
 		</main>
+		{% include "blogs/site-footer.html" %}		
 	</body>
-	<script type="text/javascript" src="{% static 'scripts/bootstrap/bootstrap.min.js' %}"></script>
 </html>

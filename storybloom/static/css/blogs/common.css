@@ -1,7 +1,5 @@
-@import url('../bootstrap/bootstrap.css');
-@import url('../bootstrap/bootstrap-responsive.css');
+@import url('../../bootstrap/css/bootstrap.css');
 @import url('./base.css');
 @import url('./layout.css');
 @import url('./siteheader.css');
 @import url('./navbar.css');
-@import url('./sitecontentright.css');

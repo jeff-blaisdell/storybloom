@@ -1,0 +1,12 @@
+.profile {
+	padding-top: 70px;
+	max-width: 200px;
+ }
+
+.profile-blurb {
+	font-size: 1.1em;
+	line-height: 1.5em;
+	font-family: 'Indie Flower';
+	text-align: center;
+	padding: 10px 0px 0px 0px;
+}
