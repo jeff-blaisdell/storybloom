@@ -1,6 +1,6 @@
 .profile {
-	padding-top: 70px;
-	max-width: 200px;
+	padding-top: 75px;
+	max-width: 250px;
  }
 
 .profile-blurb {
@@ -9,4 +9,5 @@
 	font-family: 'Indie Flower';
 	text-align: center;
 	padding: 10px 0px 0px 0px;
+	color: #4C4C4A;
 }

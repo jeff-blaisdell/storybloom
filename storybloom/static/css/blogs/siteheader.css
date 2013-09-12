@@ -3,6 +3,7 @@
  */
 .siteheader {
     height: 200px;
+    padding: 10px;
 }
 
 .siteheader-image {
@@ -11,19 +12,53 @@
 	background-image: url('../../images/banner4.jpg');
     background-position-x: 50%;
     background-position-y: 50%;
-    background-size: cover;
+    background-size: 68%;
+    background-repeat: no-repeat;
+
 }
 
 .siteheader-content {
-    width: 300px;
-    padding: 5px 50px;
-    color: white;
+     color: white;
+     text-align: center;
 }
 
 .siteheader-content-inner {
     font-family: 'Indie Flower', cursive;
     color: black;
-    line-height: 30px;
+    text-align: center;
+    font-size: 2.5em;
+    font-style: italic;
+    color: #4C4C4A;
+
 }
 
+@media only screen and (max-width: 800px) {
+    .siteheader {
+    padding: 0px 0px 0px 0px;
+}
+    .siteheader-image {
+        background-size: 85%;
+    }
+    .siteheader-content-inner {
+        font-size: 2.2em;
+        padding-top: .4em;
+    }
+   
+}
+    
+@media only screen and (max-width: 480px) { 
 
+  .siteheader {
+    padding: 0px 0px 0px 0px;
+}
+    .siteheader-image {
+        background-size: 140%;
+    }
+    .siteheader-content-inner {
+        font-size: 2.2em;
+        padding-top: .4em;
+    }
+    .l-global-width {
+        width: 100%;
+}
+}
