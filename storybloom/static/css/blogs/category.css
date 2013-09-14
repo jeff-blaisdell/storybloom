@@ -1,0 +1,19 @@
+.profile {
+	padding-top: 85px;
+	max-width: 250px;
+ }
+
+.profile-blurb {
+	font-size: 1.1em;
+	line-height: 1.5em;
+	font-family: 'Indie Flower';
+	text-align: center;
+	padding: 10px 0px 0px 0px;
+	color: #4C4C4A;
+}
+
+.row h1{
+	font-size: 1.8em;
+	line-height: 1.5em;
+	color: #4C4C4A;
+}

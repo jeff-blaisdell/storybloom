@@ -1,3 +1,18 @@
-.post img {
-	max-width: 600px;
+
+.post {
+	margin: 0 auto;
+}
+
+.profile {
+	padding-top: 85px;
+	max-width: 250px;
+ }
+
+.profile-blurb {
+	font-size: 1.1em;
+	line-height: 1.5em;
+	font-family: 'Indie Flower';
+	text-align: center;
+	padding: 10px 0px 0px 0px;
+	color: #4C4C4A;
 }

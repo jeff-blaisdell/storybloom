@@ -6,26 +6,44 @@
 		{% include "blogs/nav-bar.html" %}
 		<link type="text/css" rel="stylesheet" href="{% static 'css/blogs/post.css' %}">
 		<main class="l-global-width">
-		
-			<div class="post">
-				<header class="post-header">
-					<h3>{{post.title}}</h3>
-					 <span onclick='return false;'></span>
-				</header>
-				<div class="post-content">
-					<p>{{post.post|safe}}</p>
-				</div>	
-				<footer class="post-footer">
-					<span class="post-author">
-						{{post.author}}
-					</span>
-					<span class="post-date">
-						{{post.pub_date}}
-					</span>
-				
-				</footer>		
+			<div class="row">
+				<div class="col-sm-8">
+					<div class="post">
+						<header class="post-header">
+							<h3>
+								{{post.title}}
+							</h3>
+							<span onclick='return false;'>
+							</span>
+						</header>
+						<div class="post-content">
+							<p>
+								{{post.post|safe}}
+							</p>
+						</div>
+						<footer class="post-footer">
+							<span class="post-author">
+								{{post.author}}
+							</span>
+							<span class="post-date">
+								{{post.pub_date}}
+							</span>
+						</footer>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="profile">
+						<img class="profile-photo" src="/static/images/profile.jpg">
+						<div class="profile-blurb">
+							Story Bloom is about the little things that make life great! Join me in my journey
+							of all things artistic with you, including recipes, diy, and inspirations. Grab a
+							cup of coffee, maybe some scissors or glue, and enjoy!
+						</div>
+					</div>
+				</div>
 			</div>
 		</main>
-		{% include "blogs/site-footer.html" %}		
+		{% include "blogs/site-footer.html" %}
 	</body>
+
 </html>

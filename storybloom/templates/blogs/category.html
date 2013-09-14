@@ -1,30 +1,51 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html>
-	{% include "blogs/site-header.html" %}		
+	{% include "blogs/site-header.html" %}
 	<body>
 		{% include "blogs/nav-bar.html" %}
-		<link type="text/css" rel="stylesheet" href="{% static 'css/blogs/category.css' %}">		
+		<link type="text/css" rel="stylesheet" href="{% static 'css/blogs/category.css' %}">
 		<main class="l-global-width">
-		    <h1>{{category.name}}</h1>
-		    <h2>{{category.short_desc}}</h2>
-		    {% for post in posts %}
-				<div class="post">
-					<header class="post-header">
-						<h3><a href="/b/{{post.category.id}}/{{post.id}}">{{post.title}}</a></h3>
-					</header>
-					<img src="{% static post.image_url %}" />
-					<footer class="post-footer">
-						<span class="post-author">
-							{{post.author}}
-						</span>
-						<span class="post-date">
-							{{post.pub_date}}
-						</span>
-					</footer>		
+			<div class="row">
+				<div class="col-sm-8">
+					<h1>
+						{{category.name}}
+					</h1>
+					
+					{% for post in posts %}
+					<div class="post">
+						<header class="post-header">
+							<h3>
+								<a href="/b/{{post.category.id}}/{{post.id}}">{{post.title}}</a>
+							</h3>
+						</header>
+						<img class="img-responsive" src="{% static post.image_url %}" />
+						<footer class="post-footer">
+							<span class="post-author">
+								{{post.author}}
+							</span>
+							<span class="post-date">
+								{{post.pub_date}}
+							<span>
+						</footer>
+						
+					</div>
+					{% endfor %}
 				</div>
-			{% endfor %}
+				
+				<div class="col-sm-4">
+					<div class="profile">
+						<img class="profile-photo" src="/static/images/profile.jpg">
+						<div class="profile-blurb">
+							Story Bloom is about the little things that make life great! Join me in my journey
+							of all things artistic with you, including recipes, diy, and inspirations. Grab a
+							cup of coffee, maybe some scissors or glue, and enjoy!
+						</div>
+					</div>
+				</div>
+			</div>
 		</main>
-		{% include "blogs/site-footer.html" %}		
+		{% include "blogs/site-footer.html" %}
 	</body>
+
 </html>
