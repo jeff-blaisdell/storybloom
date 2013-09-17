@@ -16,10 +16,10 @@
 					<div class="post">
 						<header class="post-header">
 							<h3>
-								<a href="/b/{{post.category.id}}/{{post.id}}">{{post.title}}</a>
+								<a href="/b/{{post.category.id}}/{{post.id}}">{{post.title}}<img class="img-responsive" src="{% static post.image_url %}" /></a>
 							</h3>
 						</header>
-						<img class="img-responsive" src="{% static post.image_url %}" />
+						
 						<footer class="post-footer">
 							<span class="post-author">
 								{{post.author}}
