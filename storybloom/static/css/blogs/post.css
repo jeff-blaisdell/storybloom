@@ -16,3 +16,16 @@
 	padding: 10px 0px 0px 0px;
 	color: #4C4C4A;
 }
+
+.top {
+	position: fixed;
+	bottom:2px;
+    right:2px;
+    display: none;
+    padding: 10px;
+    border-radius: 3px;
+    background: linear-gradient(#ffffff,#f6f6f6);
+	background-color: #f7f7f7;
+	text-shadow: 0 1px #fff;
+	border: 1px solid #ccc;
+}
