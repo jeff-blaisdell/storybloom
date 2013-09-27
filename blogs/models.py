@@ -27,3 +27,5 @@ class Post(models.Model):
         return self.title
     def __unicode__(self):
         return self.title
+    class Meta:
+        ordering = ['-pub_date']
