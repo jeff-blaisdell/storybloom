@@ -6,7 +6,8 @@
             height: 40px;  
             width: 100%;  
             background: #ffffff;  
-            font-size: 1.5em;  
+            font-size: 1.5em; 
+            font-weight: bold; 
             font-family: 'Indie Flower'; 
             position: relative;  
             
@@ -45,15 +46,13 @@
         text-align: center;  
         text-decoration: none;  
         line-height: 40px;  
-        text-shadow: 1px 1px 0px #545366; 
-
-    }  
+        }  
 
     
     
     nav a:hover, nav a:active {  
-        color: #8c99a4;  
-        text-decoration: none;
+        color: #099C77;  
+        text-decoration: underline;
     }
     nav a#pull {  
         display: none;  
@@ -79,10 +78,7 @@
         width: 33.333%;  
         float: left;  
         position: relative;
-       -moz-box-shadow:    inset 0 0 10px #B2B1B1;
-       -webkit-box-shadow: inset 0 0 10px #B2B1B1;
-       box-shadow:         inset 0 0 10px #B2B1B1;
-    }  
+ 
   
     nav a {  
         text-align: center;  

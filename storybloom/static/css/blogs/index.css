@@ -1,6 +1,9 @@
 .profile {
-	padding-top: 75px;
-	
+	padding-top: 75px;	
+ }
+
+ .profile-img .img-responsive {
+ 	margin: 0 auto;
  }
 
 .profile-blurb {
