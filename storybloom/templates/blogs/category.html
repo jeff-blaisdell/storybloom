@@ -8,6 +8,8 @@
 		<main class="l-global-width">
 			<div class="row">
 				<div class="col-sm-8">
+					<div class="col-sm-4">
+
 					<h1>
 						{{category.name}}
 					</h1>
@@ -17,6 +19,9 @@
 						<header class="post-header">
 							<h3>
 								<a href="/b/{{post.category.id}}/{{post.id}}">{{post.title}}<img class="img-responsive" src="{% static post.image_url %}" /></a>
+								<span class="short_desc">
+									{{post.short_desc}}
+								</span>
 							</h3>
 						</header>
 						
@@ -28,7 +33,7 @@
 								{{post.pub_date}}
 							<span>
 						</footer>
-						
+						</div>
 					</div>
 					{% endfor %}
 				</div>

@@ -11,6 +11,11 @@
 	padding: 10px 0px 0px 0px;
 	color: #4C4C4A;
 }
+.short_desc {
+	font-size: .6em;
+	font-family: 'Indie Flower';
+	text-align: center;
+}
 
 .row h1{
 	font-size: 1.8em;
