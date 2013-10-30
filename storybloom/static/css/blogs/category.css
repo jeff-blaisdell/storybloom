@@ -1,5 +1,5 @@
 .profile {
-	padding-top: 85px;
+	padding-top: 20px;
 	max-width: 250px;
  }
 
@@ -11,8 +11,8 @@
 	padding: 10px 0px 0px 0px;
 	color: #4C4C4A;
 }
-.short_desc {
-	font-size: .6em;
+.post-header {
+	font-size: 1.0em;
 	font-family: 'Indie Flower';
 	text-align: center;
 }
@@ -21,4 +21,7 @@
 	font-size: 1.8em;
 	line-height: 1.5em;
 	color: #4C4C4A;
+}
+.post{
+	padding-top: 20px;
 }
