@@ -1,11 +1,10 @@
 
 .post {
 	margin: 0 auto;
+	padding-top: 35px;
 }
-
-.profile {
-	padding-top: 85px;
-	max-width: 250px;
+ .profile-img .img-responsive {
+ 	margin: 0 auto;
  }
 
 .profile-blurb {
@@ -13,7 +12,7 @@
 	line-height: 1.5em;
 	font-family: 'Indie Flower';
 	text-align: center;
-	padding: 10px 0px 0px 0px;
+	padding: 0px 0px 10px 0px;
 	color: #4C4C4A;
 }
 

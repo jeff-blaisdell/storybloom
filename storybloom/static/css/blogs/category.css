@@ -1,6 +1,13 @@
 .profile {
-	padding-top: 20px;
-	max-width: 250px;
+	padding-top: 20px;	
+ }
+
+ .row {
+ 	padding-top: 20px;
+ }
+
+ .profile-img .img-responsive {
+ 	margin: 0 auto;
  }
 
 .profile-blurb {
@@ -8,20 +15,19 @@
 	line-height: 1.5em;
 	font-family: 'Indie Flower';
 	text-align: center;
-	padding: 10px 0px 0px 0px;
+	padding: 0px 0px 10px 0px;
 	color: #4C4C4A;
-}
-.post-header {
-	font-size: 1.0em;
-	font-family: 'Indie Flower';
-	text-align: center;
 }
 
-.row h1{
-	font-size: 1.8em;
-	line-height: 1.5em;
-	color: #4C4C4A;
-}
-.post{
-	padding-top: 20px;
+.top {
+	position: fixed;
+	bottom:2px;
+    right:2px;
+    display: none;
+    padding: 10px;
+    border-radius: 3px;
+    background: linear-gradient(#ffffff,#f6f6f6);
+	background-color: #f7f7f7;
+	text-shadow: 0 1px #fff;
+	border: 1px solid #ccc;
 }
