@@ -22,3 +22,9 @@ def get_post(request, category_id, post_id):
         'post': Post.objects.get(id=post_id) 
     }
     return render(request, 'blogs/post.html', context)
+
+def about(request):
+    context = {
+        'categories': Category.objects.all()
+    }
+    return render(request, 'blogs/about.html', context)
