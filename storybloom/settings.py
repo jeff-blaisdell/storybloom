@@ -4,6 +4,12 @@ import os
 SETTINGS_DIR = os.path.abspath(os.path.dirname(__file__))
 
 DEBUG = False
+
+try:
+    from local_settings import *
+except ImportError, e:
+    pass
+
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -68,7 +74,6 @@ STATIC_ROOT = 'storybloom/static-build/'
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -86,10 +91,14 @@ STATICFILES_FINDERS = (
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
+STATIC_URL = '/static/'
+
 if not DEBUG:
     AWS_STORAGE_BUCKET_NAME = os.environ['STORYBLOOM_AWS_STORAGE_BUCKET_NAME'] 
     AWS_ACCESS_KEY_ID = os.environ['STORYBLOOM_AWS_ACCESS_KEY_ID']
     AWS_SECRET_ACCESS_KEY = os.environ['STORYBLOOM_AWS_SECRET_ACCESS_KEY']
+    AWS_S3_SECURE_URLS = False
+    AWS_QUERYSTRING_AUTH = False
     STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
     S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
     STATIC_URL = 'http://s3.storybloom.org/'
@@ -176,8 +185,3 @@ from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 TEMPLATE_CONTEXT_PROCESSORS = TCP + (
     'django.core.context_processors.request',
 )
-
-try:
-    from local_settings import *
-except ImportError, e:
-    pass
