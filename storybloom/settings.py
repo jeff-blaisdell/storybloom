@@ -86,6 +86,14 @@ STATICFILES_FINDERS = (
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
+if not DEBUG:
+    AWS_STORAGE_BUCKET_NAME = os.environ['STORYBLOOM_AWS_STORAGE_BUCKET_NAME'] 
+    AWS_ACCESS_KEY_ID = os.environ['STORYBLOOM_AWS_ACCESS_KEY_ID']
+    AWS_SECRET_ACCESS_KEY = os.environ['STORYBLOOM_AWS_SECRET_ACCESS_KEY']
+    STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+    S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
+    STATIC_URL = 'http://s3.storybloom.org/'
+
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'cfnuxt7916rxld%&$_ivj@5$-q!lww-(!#b2qo09m)vocw(_#4'
 
@@ -130,7 +138,8 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
-    'blogs'
+    'blogs',
+    'storages'
 )
 
 # A sample logging configuration. The only tangible logging
@@ -172,4 +181,3 @@ try:
     from local_settings import *
 except ImportError, e:
     pass
-
