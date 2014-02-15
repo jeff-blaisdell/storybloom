@@ -18,7 +18,12 @@
 					<div class="post">
 						<header class="post-header">
 							<span>
-								<a href="/b/{{post.category.id}}/{{post.id}}"><img class="img-responsive" src="{% static post.image_url %}" />{{post.short_desc}}</a>
+								<a href="/b/{{post.category.id}}/{{post.id}}">
+									<img class="img-responsive" src="{% static post.image_url %}" />
+									<span>
+										{{post.short_desc}}
+									</span>
+								</a>
 							</span>
 						</header>
 					
@@ -35,10 +40,12 @@
 			<div class="col-sm-4">
 					<div class="profile">
 						<div class="profile-img">
-						<a href="about.html"><img class="img-responsive" src="/static/images/profile2.jpg" title="About"></a>
+						<a href="about.html">
+							<img class="img-responsive" src="{% static 'images/profile2.jpg' %}" title="About">
+						</a>
 						</div>
 						<div class="profile-blurb">
-							<img class="img-responsive" src="../../static/images/banner1.jpg" title="About">
+							<img class="img-responsive" src="{% static 'images/banner1.jpg' %}" title="About">
 							Story Bloom is about the little things that make life great!  Join me in my journey of all things artistic. Grab a cup of coffee, maybe some scissors or glue, and enjoy!
 						</div>
 					</div>

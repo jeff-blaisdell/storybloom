@@ -7,7 +7,10 @@
     </li>
     {% for category in categories %}
       <li> 
-        <a  href="/b/{{category.id}}" title="{{category.name}}"><img src="../../../static/images/{{category.image_url}}"><span>{{category.name}}</span></a>
+        <a href="/b/{{category.id}}" title="{{category.name}}">
+        	<img src="{% static category.image_url %}">
+        	<span>{{category.name}}</span>
+        </a>
       </li>        
     {% endfor %}
      </ul>
@@ -15,11 +18,9 @@
 </nav>  
 </span>
 <header class="siteheader l-global-width">
-   <a href="/"><img class="siteheader-image" src="../../../static/images/storybloom1.jpg">
-
-
-         </a>
-
+    <a href="/">
+   		<img class="siteheader-image" src="{% static 'images/storybloom1.jpg' %}">
+	</a>
 </header>
 <span class="full-nav">
 <nav class="clearfix">  
@@ -29,7 +30,10 @@
     </li>
     {% for category in categories %}
       <li> 
-        <a  href="/b/{{category.id}}" title="{{category.name}}"><img src="../../../static/images/{{category.image_url}}"><span>{{category.name}}</span></a>
+        <a  href="/b/{{category.id}}" title="{{category.name}}">
+        	<img src="{% static category.image_url %}">
+        	<span>{{category.name}}</span>
+        </a>
       </li>        
     {% endfor %}
 
