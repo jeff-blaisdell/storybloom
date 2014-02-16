@@ -93,15 +93,23 @@ STATICFILES_FINDERS = (
 
 STATIC_URL = '/static/'
 
+DEFAULT_FILE_STORAGE = 's3_folder_storage.s3.DefaultStorage'
+DEFAULT_S3_PATH = "media"
+AWS_STORAGE_BUCKET_NAME = os.environ['STORYBLOOM_AWS_STORAGE_BUCKET_NAME'] 
+AWS_ACCESS_KEY_ID = os.environ['STORYBLOOM_AWS_ACCESS_KEY_ID']
+AWS_SECRET_ACCESS_KEY = os.environ['STORYBLOOM_AWS_SECRET_ACCESS_KEY']
+AWS_S3_SECURE_URLS = False
+AWS_QUERYSTRING_AUTH = False
+MEDIA_ROOT = '/%s/' % DEFAULT_S3_PATH
+MEDIA_URL = '//s3.storybloom.org/media/'
+
 if not DEBUG:
-    AWS_STORAGE_BUCKET_NAME = os.environ['STORYBLOOM_AWS_STORAGE_BUCKET_NAME'] 
-    AWS_ACCESS_KEY_ID = os.environ['STORYBLOOM_AWS_ACCESS_KEY_ID']
-    AWS_SECRET_ACCESS_KEY = os.environ['STORYBLOOM_AWS_SECRET_ACCESS_KEY']
-    AWS_S3_SECURE_URLS = False
-    AWS_QUERYSTRING_AUTH = False
-    STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-    S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
-    STATIC_URL = 'http://s3.storybloom.org/'
+    STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
+    STATIC_S3_PATH = "static"    
+    STATIC_ROOT = "/%s/" % STATIC_S3_PATH
+    STATIC_URL = '//s3.amazonaws.com/%s/static/' % AWS_STORAGE_BUCKET_NAME
+    ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
+
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'cfnuxt7916rxld%&$_ivj@5$-q!lww-(!#b2qo09m)vocw(_#4'
@@ -148,7 +156,8 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'blogs',
-    'storages'
+    'storages',
+    's3_folder_storage'
 )
 
 # A sample logging configuration. The only tangible logging
